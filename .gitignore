@@ -22,3 +22,16 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+
+### Java class files
+*.class
+target/
+.classpath
+.setting/
+# Generated files
+bin/
+gen/
+
+# Gradle files
+.mvn/
+build/
