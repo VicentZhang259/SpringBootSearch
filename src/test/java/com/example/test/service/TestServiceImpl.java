@@ -35,7 +35,7 @@ public class TestServiceImpl {
 	List<User> userList = new ArrayList<User>();
 	
 	@MockBean
-	UserMapper userDao;
+	UserMapper mapper;
 	@Test
 	public void	testGetAll(){
 		
@@ -45,7 +45,7 @@ public class TestServiceImpl {
 		user.setId(0);
 		user.setAccount("9527");
 		
-		BDDMockito.given(this.userDao.get(0)).willReturn(user);	
+		BDDMockito.given(this.mapper.get(0)).willReturn(user);	
 		org.junit.Assert.assertTrue(userSerice.getUser(0).equals(user));
 	}
 	
